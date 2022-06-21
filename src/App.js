@@ -49,7 +49,7 @@ function App() {
             <div className="">
               <img
                 src={ldlogo}
-                className="App-pulse mx-auto h-56 lg:h-60 2xl:h-80"
+                className="mx-auto h-56 lg:h-60 2xl:h-80"
                 alt="logo"
               />
             </div>
