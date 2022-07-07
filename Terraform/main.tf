@@ -37,7 +37,7 @@ resource "launchdarkly_project" "terraform" {
 resource "launchdarkly_feature_flag" "qrcode" {
   project_key = launchdarkly_project.terraform.key
   key         = "qrcode"
-  name        = "QR Code"
+  name        = "0 - QR Code"
   description = "This flag enables the view of the QR Code on our application canvas for mobile device viewing"
 
   variation_type = "boolean"
@@ -53,8 +53,8 @@ resource "launchdarkly_feature_flag" "qrcode" {
   }
   
   defaults {
-    on_variation = 1
-    off_variation = 0
+    on_variation = 0
+    off_variation = 1
   }
 
   tags = [
@@ -65,7 +65,7 @@ resource "launchdarkly_feature_flag" "qrcode" {
 resource "launchdarkly_feature_flag" "logoversion" {
   project_key = launchdarkly_project.terraform.key
   key         = "logoversion"
-  name        = "Logo Version"
+  name        = "4 - Logo Version"
   description = "This flag controls which logo is visible within the application"
 
   variation_type = "boolean"
@@ -81,8 +81,8 @@ resource "launchdarkly_feature_flag" "logoversion" {
   }
   
   defaults {
-    on_variation = 1
-    off_variation = 0
+    on_variation = 0
+    off_variation = 1
   }
 
   tags = [
@@ -93,14 +93,14 @@ resource "launchdarkly_feature_flag" "logoversion" {
 resource "launchdarkly_feature_flag" "cardshow" {
   project_key = launchdarkly_project.terraform.key
   key         = "cardshow"
-  name        = "Release Cards"
+  name        = "5 - Release Cards"
   description = "This flag controls the visibility of the release cards on the bottom of the UI "
 
   variation_type = "boolean"
   variations {
     value       = "true"
     name        = "Show Release Cards"
-    description = "Show the app delivery release cards"
+    description = "Show the **app delivery** release cards"
   }
   variations {
     value       = "false"
@@ -109,8 +109,8 @@ resource "launchdarkly_feature_flag" "cardshow" {
   }
   
   defaults {
-    on_variation = 1
-    off_variation = 0
+    on_variation = 0
+    off_variation = 1
   }
 
   tags = [
@@ -121,7 +121,7 @@ resource "launchdarkly_feature_flag" "cardshow" {
 resource "launchdarkly_feature_flag" "upperimage" {
   project_key = launchdarkly_project.terraform.key
   key         = "upperimage"
-  name        = "Upper Image"
+  name        = "3 - Upper Image"
   description = "Show the upper immage on page"
 
   variation_type = "boolean"
@@ -137,8 +137,8 @@ resource "launchdarkly_feature_flag" "upperimage" {
   }
   
   defaults {
-    on_variation = 1
-    off_variation = 0
+    on_variation = 0
+    off_variation = 1
   }
 
   tags = [
@@ -149,7 +149,7 @@ resource "launchdarkly_feature_flag" "upperimage" {
 resource "launchdarkly_feature_flag" "login" {
   project_key = launchdarkly_project.terraform.key
   key         = "login"
-  name        = "Login UI"
+  name        = "2 - Login UI"
   description = "Show the login box for user targeting"
 
   variation_type = "boolean"
@@ -165,8 +165,8 @@ resource "launchdarkly_feature_flag" "login" {
   }
   
   defaults {
-    on_variation = 1
-    off_variation = 0
+    on_variation = 0
+    off_variation = 1
   }
 
   tags = [
@@ -177,7 +177,7 @@ resource "launchdarkly_feature_flag" "login" {
 resource "launchdarkly_feature_flag" "prodHeader" {
   project_key = launchdarkly_project.terraform.key
   key         = "prodHeader"
-  name        = "Production Header"
+  name        = "1 - Production Header"
   description = "Enables the production header view in the UI"
 
   variation_type = "boolean"
@@ -193,8 +193,8 @@ resource "launchdarkly_feature_flag" "prodHeader" {
   }
   
   defaults {
-    on_variation = 1
-    off_variation = 0
+    on_variation = 0
+    off_variation = 1
   }
 
   tags = [
